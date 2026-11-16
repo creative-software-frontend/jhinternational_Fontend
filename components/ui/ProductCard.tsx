@@ -1,0 +1,188 @@
+"use client"
+
+import { Button } from "./button"
+import { Card } from "./card"
+import { Product } from "@/lib/data/types"
+import { formatBdt } from "@/lib/data/products.data"
+import Image from "next/image"
+import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa"
+import { useShop } from "@/context/ShopContext"
+import { FaArrowRightArrowLeft } from "react-icons/fa6"
+import { BuilderActions } from "../product-card/actions/BuilderActions"
+import { GrabDealAction } from "../product-card/actions/GrabDealAction"
+import { DefaultActions } from "../product-card/actions/DefaultActions"
+
+type ProductCardProps =
+  | { mode?: "default"; product: Product }
+  | { mode: "builder"; product: Product; onSelect: (p: Product) => void }
+  | {
+      mode: "grab"
+      product: Product
+    }
+
+// export type ProductCardMode = "default" | "builder" | "graph"
+const ProductCard = (props: ProductCardProps) => {
+  const { toggleFavorite, isFavorite, toggleCompare, isInCompare } = useShop()
+  const product = props.product
+  const liked = isFavorite(product.id)
+  const compared = isInCompare(product.id)
+
+  // toggle to compare list
+  const handleToggleCompare = () => {
+    toggleCompare({
+      id: product.id,
+      name: product.title,
+      price: product.price,
+      image: product.image,
+      // spec: product.spec || product.description,
+      // wattage: product.,
+      category: product.category,
+    })
+  }
+
+  // toggle to favorite list
+  const handleToggleFavorite = () => {
+    toggleFavorite({
+      id: product.id,
+      name: product.title,
+      price: product.price,
+      image: product.image,
+      // spec: product.specs || product.description,
+    })
+  }
+
+  // action buttons
+
+  const renderActionButton = () => {
+    switch (props.mode) {
+      case "builder":
+        return <BuilderActions onSelect={props.onSelect} product={product} />
+      case "grab":
+        return <GrabDealAction product={product} />
+      default:
+        return <DefaultActions product={product} />
+    }
+  }
+
+  return (
+    <Card
+      key={product.id}
+      className="group relative flex flex-col justify-between rounded-xl border-border bg-card p-4 shadow-sm transition-all duration-200 hover:shadow-md"
+    >
+      <div className="flex grow flex-col">
+        <div className="relative mb-3 flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-muted p-2">
+          <span className="absolute top-2 left-2 z-10 rounded bg-tertiary-fixed px-2 py-0.5 text-xs font-extrabold text-on-tertiary-fixed uppercase">
+            {product.discount}% OFF
+          </span>
+          <div className="absolute top-2 right-2 z-10 flex flex-col gap-1">
+            {/* <div className="absolute top-2 right-2 z-10 flex flex-col gap-1 opacity-0 transition-opacity group-hover:opacity-100"> */}
+            <Button
+              size="icon"
+              onClick={handleToggleFavorite}
+              variant="secondary"
+              className="h-8 w-8 rounded-full bg-card text-foreground shadow-sm hover:bg-surface"
+              title="Add to Wishlist"
+            >
+              {liked ? (
+                <FaHeart className="animate-scale-up text-xs text-rose-500 sm:text-sm" />
+              ) : (
+                <FaRegHeart className="text-xs text-muted-foreground hover:text-foreground sm:text-sm" />
+              )}
+            </Button>
+            <Button
+              onClick={handleToggleCompare}
+              size="icon"
+              variant="secondary"
+              className="h-8 w-8 rounded-full bg-card text-foreground shadow-sm hover:bg-surface"
+              title="Compare Product"
+            >
+              {compared ? (
+                <FaArrowRightArrowLeft className="animate-scale-up text-xs text-rose-500 sm:text-sm" />
+              ) : (
+                <FaArrowRightArrowLeft className="text-xs text-muted-foreground hover:text-foreground sm:text-sm" />
+              )}
+            </Button>
+          </div>
+          <Image
+            width={400}
+            height={400}
+            src={product.image}
+            alt={product.title}
+            className="h-full w-full object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+
+        <div className="mb-1 flex items-center gap-2">
+          <span className="text-xs font-bold text-muted-foreground uppercase">
+            {product.brand}
+          </span>
+          <span className="text-muted-foreground">·</span>
+          <div className="flex items-center text-xs text-amber-500">
+            <FaStar />
+            <span className="ml-0.5 font-bold text-foreground">
+              {product.rating}
+            </span>
+            <span title="Reviews" className="ml-0.5 text-muted-foreground">
+              ({product.reviews})
+            </span>
+          </div>
+        </div>
+
+        <h3 className="line-clamp-2 font-heading text-sm leading-snug font-bold text-foreground transition-colors group-hover:text-primary sm:text-base">
+          {product.title}
+        </h3>
+
+        <div className="mt-2 flex flex-wrap gap-1">
+          {product.specs.map((spec, idx) => (
+            <span
+              key={idx}
+              className="rounded bg-muted px-1.5 py-0.5 text-xs text-muted-foreground outline"
+            >
+              {spec}
+            </span>
+          ))}
+        </div>
+
+        {/* Stock Progress Indicator */}
+        <div className="mt-auto">
+          <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-muted">
+            <div
+              className="h-full rounded-full bg-tertiary"
+              style={{ width: `${product.claimedPercent ?? 0}%` }}
+            ></div>
+          </div>
+          <div className="mt-1 flex items-center justify-between text-xs text-muted-foreground">
+            <span>
+              Sold:
+              <strong className="text-foreground">
+                {product.sold ?? 0}/{product.total ?? 0}
+              </strong>
+            </span>
+            <span className="font-bold text-tertiary">
+              {product.claimedPercent ?? 0}% Claimed
+            </span>
+          </div>
+
+          <div className="mt-4 flex items-baseline gap-2 pt-2">
+            <span className="text-lg font-extrabold text-foreground">
+              {formatBdt(product.price)}
+            </span>
+            {product.oldPrice && (
+              <span className="text-xs text-muted-foreground line-through">
+                {formatBdt(product.oldPrice)}
+              </span>
+            )}
+            {product.save && (
+              <span className="ml-auto text-xs font-semibold text-emerald-600">
+                Save {formatBdt(product.save)}
+              </span>
+            )}
+          </div>
+        </div>
+      </div>
+      {/* action buttons */}
+      {renderActionButton()}
+    </Card>
+  )
+}
+export default ProductCard
