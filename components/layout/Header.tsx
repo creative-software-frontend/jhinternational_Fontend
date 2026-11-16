@@ -26,22 +26,7 @@ import LogoImage from "@/public/images/logo.png"
 import HeaderCartButton from "../ui/HeaderCartButton"
 import { useShop } from "@/context/ShopContext"
 import { useAuth } from "@/context/AuthContext"
-import { usePathname } from "next/navigation"
 
-type NavigationItem = {
-  label: string
-  href: string
-}
-
-const navigationItems: NavigationItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Components", href: "/components" },
-  { label: "Laptops", href: "/laptops" },
-  { label: "Monitors", href: "/monitors" },
-  { label: "Gaming Console", href: "/gaming-console" },
-  { label: "Storage Devices", href: "/storage-devices" },
-  { label: "Latest Products", href: "/latest-products" },
-]
 
 const trendingKeywords: string[] = [
   "RTX 4080 Super",
@@ -53,7 +38,6 @@ const trendingKeywords: string[] = [
 export default function Header() {
   const { favoriteItemCount, compareItemsCount } = useShop()
   const { openLoginModal } = useAuth()
-  const pathName = usePathname()
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b bg-background/95 shadow-xs backdrop-blur-md">
@@ -251,33 +235,11 @@ export default function Header() {
       </div>
 
       {/* 3. Categories and Navigation */}
-      <div className="bg-card shadow-xs">
+      <div className="relative border-b bg-card shadow-xs">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center gap-2">
-            {/* Categories */}
+          <div className="flex min-w-0 flex-1 items-center">
+            {/* Categories Navigation Bar (Desktop & Mobile) */}
             <CategoriesSidebar />
-
-            {/* Navigation Links */}
-            <nav
-              aria-label="Main navigation"
-              className="hidden items-center gap-1 overflow-x-auto py-1 lg:flex"
-            >
-              {navigationItems.map((item) => (
-                <Button
-                  key={item.href}
-                  asChild
-                  variant="ghost"
-                  size="sm"
-                  className={
-                    item.href === pathName
-                      ? "bg-primary/10 font-semibold text-primary hover:bg-primary/15 hover:text-primary"
-                      : "text-muted-foreground"
-                  }
-                >
-                  <Link href={item.href}>{item.label}</Link>
-                </Button>
-              ))}
-            </nav>
           </div>
 
           {/* Offers */}
