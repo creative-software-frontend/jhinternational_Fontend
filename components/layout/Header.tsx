@@ -27,7 +27,6 @@ import HeaderCartButton from "../ui/HeaderCartButton"
 import { useShop } from "@/context/ShopContext"
 import { useAuth } from "@/context/AuthContext"
 
-
 const trendingKeywords: string[] = [
   "RTX 4080 Super",
   "MacBook Pro M3",
@@ -241,20 +240,6 @@ export default function Header() {
             {/* Categories Navigation Bar (Desktop & Mobile) */}
             <CategoriesSidebar />
           </div>
-
-          {/* Offers */}
-          <Button
-            asChild
-            variant="outline"
-            size="sm"
-            className="shrink-0 border-amber-500/30 bg-amber-500/10 font-bold text-amber-700 hover:bg-amber-500/20 dark:text-amber-400"
-          >
-            <Link href="/flash-deals">
-              <FaFireFlameCurved className="size-4" />
-              <span className="hidden sm:inline">OFFERS & DEALS</span>
-              <span className="sm:hidden">OFFERS</span>
-            </Link>
-          </Button>
         </div>
       </div>
     </header>
