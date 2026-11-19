@@ -19,8 +19,9 @@
 /build
 
 # misc
-.DS_Store
+.DS_Store 
 *.pem
+/build
 
 # debug
 npm-debug.log*

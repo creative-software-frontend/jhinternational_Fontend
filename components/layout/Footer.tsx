@@ -25,7 +25,7 @@ export default function Footer() {
             </h3>
             <p className="mt-1 text-sm text-muted-foreground">
               Subscribe to our weekly newsletter for exclusive discounts on RTX
-              40-series cards, prebuilts, and flash sales.
+              40-series cards, prebuilts, and flash sales.f
             </p>
           </div>
           <div className="flex w-full flex-col gap-2 sm:flex-row lg:w-auto">
