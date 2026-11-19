@@ -1,5 +1,6 @@
 "use client"
 
+import { SITE_CONFIG } from "@/lib/config/site.config"
 import { useMemo, useState } from "react"
 import Link from "next/link"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -122,7 +123,7 @@ export default function AuthModal() {
                 <FaCheck className="text-lg" />
               </div>
               <span className="font-heading text-sm font-bold tracking-wide text-foreground">
-                TechnoCore Security
+                {SITE_CONFIG.shortName} Security
               </span>
             </div>
 
@@ -164,7 +165,8 @@ export default function AuthModal() {
             </div>
 
             <div className="text-xs text-muted-foreground">
-              © 2026 TechnoCore Solution Inc. All rights reserved.
+              © {new Date().getFullYear()} {SITE_CONFIG.name} Inc. All rights
+              reserved.
             </div>
           </div>
 
@@ -422,12 +424,15 @@ export default function AuthModal() {
 
               <p className="text-[10px] leading-relaxed text-muted-foreground">
                 By continuing, you agree to our{" "}
-                <Link href="/terms" className="underline hover:text-foreground">
+                <Link
+                  href={SITE_CONFIG.legal.terms.href}
+                  className="underline hover:text-foreground"
+                >
                   Terms of Service
                 </Link>{" "}
                 and{" "}
                 <Link
-                  href="/privacy"
+                  href={SITE_CONFIG.legal.privacy.href}
                   className="underline hover:text-foreground"
                 >
                   Privacy Policy

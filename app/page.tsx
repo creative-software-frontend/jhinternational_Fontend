@@ -1,3 +1,4 @@
+import { SITE_CONFIG } from "@/lib/config/site.config"
 import BrandsMarquee from "@/components/layout/BrandsMarquee"
 import FeaturedCategories from "@/components/layout/FeaturedCategories"
 import FlashDeals from "@/components/layout/FlashDeals"
@@ -11,8 +12,7 @@ import { Suspense } from "react"
 
 export const metadata: Metadata = {
   title: "Home",
-  description:
-    "Explore premium tech products, custom computer builds, and exclusive deals from TechnoCore Solution in Bangladesh.",
+  description: `Explore premium tech products, custom computer builds, and exclusive deals from ${SITE_CONFIG.name} in Bangladesh.`,
 }
 
 export default async function Page() {

@@ -1,3 +1,4 @@
+import { SITE_CONFIG } from "@/lib/config/site.config"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import {
@@ -12,6 +13,13 @@ import {
 } from "react-icons/fa"
 import Image from "next/image"
 import LogoImage from "@/public/images/logo.png"
+
+const socialIcons = {
+  facebook: FaFacebookF,
+  youtube: FaYoutube,
+  instagram: FaInstagram,
+  linkedin: FaLinkedinIn,
+}
 
 export default function Footer() {
   return (
@@ -55,17 +63,19 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <FaPhoneAlt className="shrink-0 text-primary" />
                 <span>
-                  Hotline: <strong className="text-foreground">01711976179,01758714353</strong>
-                      
-                   </span>
+                  Hotline:{" "}
+                  <strong className="text-foreground">
+                    {SITE_CONFIG.contact.phones.join(",")}
+                  </strong>
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <FaEnvelope className="shrink-0 text-primary" />
-                <span>Support: jhinternational786@gmail.com</span>
+                <span>Support: {SITE_CONFIG.contact.email}</span>
               </div>
               <div className="flex items-start gap-2">
                 <FaMapMarkerAlt className="mt-0.5 shrink-0 text-primary" />
-                <span>51,51/A Resourceful Paltan City (Ground Floor), Purana Paltan, Dhaka-1000</span>
+                <span>{SITE_CONFIG.contact.address.full}</span>
               </div>
             </div>
           </div>
@@ -102,7 +112,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/privacy"
+                  href={SITE_CONFIG.legal.privacy.href}
                   className="transition-colors hover:text-primary"
                 >
                   Privacy Policy
@@ -110,7 +120,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/terms"
+                  href={SITE_CONFIG.legal.terms.href}
                   className="transition-colors hover:text-primary"
                 >
                   Terms &amp; Conditions
@@ -247,34 +257,23 @@ export default function Footer() {
               Stay Connected
             </h4>
             <div className="flex items-center gap-2">
-              <a
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-surface-container text-muted-foreground transition-all hover:bg-primary hover:text-primary-foreground"
-              >
-                <FaFacebookF className="text-sm" />
-              </a>
-              <a
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-surface-container text-muted-foreground transition-all hover:bg-primary hover:text-primary-foreground"
-              >
-                <FaYoutube className="text-sm" />
-              </a>
-              <a
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-surface-container text-muted-foreground transition-all hover:bg-primary hover:text-primary-foreground"
-              >
-                <FaInstagram className="text-sm" />
-              </a>
-              <a
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-surface-container text-muted-foreground transition-all hover:bg-primary hover:text-primary-foreground"
-              >
-                <FaLinkedinIn className="text-sm" />
-              </a>
+              {SITE_CONFIG.socialLinks.map((social) => {
+                const Icon = socialIcons[social.key]
+                return (
+                  <a
+                    key={social.key}
+                    href={social.href}
+                    aria-label={social.label}
+                    className="flex h-9 w-9 items-center justify-center rounded-lg bg-surface-container text-muted-foreground transition-all hover:bg-primary hover:text-primary-foreground"
+                  >
+                    <Icon className="text-sm" />
+                  </a>
+                )
+              })}
             </div>
 
             <h4 className="mt-2 font-heading text-sm font-bold tracking-wider text-foreground uppercase">
-              Experience TechnoCore Solution App
+              Experience {SITE_CONFIG.name} App
             </h4>
             <div className="flex flex-col gap-2">
               <div className="flex cursor-pointer items-center gap-3 rounded-lg border border-border bg-surface-container p-2 transition-colors hover:bg-surface-container/80">
@@ -295,7 +294,7 @@ export default function Footer() {
         {/* Bottom Bar: Copyright & Payment Partners */}
         <div className="flex flex-col items-center justify-between gap-4 pt-8 text-xs text-muted-foreground md:flex-row">
           <p>
-            &copy; {new Date().getFullYear()} JH International. All
+            &copy; {new Date().getFullYear()} {SITE_CONFIG.legalName}. All
             rights reserved.
           </p>
 

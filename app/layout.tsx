@@ -1,3 +1,4 @@
+import { SITE_CONFIG } from "@/lib/config/site.config"
 import { Geist_Mono, Inter, DM_Sans } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
@@ -25,16 +26,16 @@ const fontMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://technocoresolution.com.bd"),
-  applicationName: "TechnoCore Solution",
+  metadataBase: new URL(SITE_CONFIG.url),
+  applicationName: SITE_CONFIG.name,
   title: {
-    default: "TechnoCore Solution | PC Builder & Computer Store in Bangladesh",
-    template: "%s | TechnoCore Solution",
+    default: `${SITE_CONFIG.name} | PC Builder & Computer Store in Bangladesh`,
+    template: `%s | ${SITE_CONFIG.name}`,
   },
   description:
     "Shop genuine computer components, gaming PCs, laptops, accessories, and custom builds in Bangladesh with expert support and nationwide delivery.",
   keywords: [
-    "TechnoCore Solution",
+    SITE_CONFIG.name,
     "computer store Bangladesh",
     "PC builder",
     "gaming PC",
@@ -46,9 +47,9 @@ export const metadata: Metadata = {
     "monitor",
     "peripheral",
   ],
-  authors: [{ name: "TechnoCore Solution" }],
-  creator: "TechnoCore Solution",
-  publisher: "TechnoCore Solution",
+  authors: [{ name: SITE_CONFIG.name }],
+  creator: SITE_CONFIG.name,
+  publisher: SITE_CONFIG.name,
   robots: {
     index: true,
     follow: true,
@@ -64,8 +65,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_BD",
     url: "/",
-    siteName: "TechnoCore Solution",
-    title: "TechnoCore Solution | PC Builder & Computer Store in Bangladesh",
+    siteName: SITE_CONFIG.name,
+    title: `${SITE_CONFIG.name} | PC Builder & Computer Store in Bangladesh`,
     description:
       "Discover premium computer hardware, custom PC builds, and tech accessories with trusted support and fast delivery across Bangladesh.",
     images: [
@@ -73,13 +74,13 @@ export const metadata: Metadata = {
         url: "/icon.png",
         width: 512,
         height: 512,
-        alt: "TechnoCore Solution",
+        alt: SITE_CONFIG.name,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TechnoCore Solution | PC Builder & Computer Store in Bangladesh",
+    title: `${SITE_CONFIG.name} | PC Builder & Computer Store in Bangladesh`,
     description:
       "Build your dream PC with high-performance components and genuine tech products from Bangladesh's trusted computer store.",
     images: ["/icon.png"],

@@ -1,3 +1,4 @@
+import { SITE_CONFIG } from "@/lib/config/site.config"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -7,7 +8,6 @@ import {
   FaMapMarkerAlt,
   FaArrowRight,
   FaPaperPlane,
-  FaClock,
 } from "react-icons/fa"
 import {
   FaFacebookF,
@@ -17,35 +17,40 @@ import {
 } from "react-icons/fa6"
 
 export const metadata = {
-  title: "Contact Us | TechnoCore Solution",
-  description:
-    "Get in touch with TechnoCore Solution for sales, support, and queries about your next build.",
+  title: `Contact Us | ${SITE_CONFIG.name}`,
+  description: `Get in touch with ${SITE_CONFIG.name} for sales, support, and queries about your next build.`,
 }
 
 const contacts = [
   {
     icon: FaPhoneAlt,
     title: "Hotline",
-    lines: ["01711976179, 01758714353", "Sat -Thu : 9 :00  AM - 8: 00 PM"],
+    lines: [
+      `${SITE_CONFIG.contact.phones.join(", ")}`,
+      SITE_CONFIG.contact.hours,
+    ],
   },
   {
     icon: FaEnvelope,
     title: "Email Support",
-    lines: ["jhinternational786@gmail.com", "Response within 24 hours"],
+    lines: [SITE_CONFIG.contact.email, "Response within 24 hours"],
   },
   {
     icon: FaMapMarkerAlt,
     title: "Head Office",
-    lines: ["51,51/A Resourceful Paltan City (Ground Floor)", " Purana Paltan, Dhaka-1000"],
+    lines: [
+      SITE_CONFIG.contact.address.line1,
+      ` ${SITE_CONFIG.contact.address.line2}`,
+    ],
   },
 ]
 
-const socials = [
-  { icon: FaFacebookF, label: "Facebook" },
-  { icon: FaYoutube, label: "YouTube" },
-  { icon: FaInstagram, label: "Instagram" },
-  { icon: FaLinkedinIn, label: "LinkedIn" },
-]
+const socialIcons = {
+  facebook: FaFacebookF,
+  youtube: FaYoutube,
+  instagram: FaInstagram,
+  linkedin: FaLinkedinIn,
+}
 
 export default function ContactPage() {
   return (
@@ -204,15 +209,38 @@ export default function ContactPage() {
                   Visit Our Flagship Store
                 </h3>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  51,51/A Resourceful Paltan City (Ground Floor), Purana Paltan, Dhaka-1000
+                  {SITE_CONFIG.contact.address.full}
                 </p>
-                <div className="mt-4 flex aspect-video items-center justify-center rounded-xl bg-muted text-xs text-muted-foreground">
-                  Map Preview Coming Soon
-                </div>
+
+                {SITE_CONFIG.contact.address.full ? (
+                  <div className="mt-4 aspect-video w-full overflow-hidden rounded-xl border border-border bg-muted">
+                    {/* <iframe
+                      title={`${SITE_CONFIG.name} Flagship Store Location`}
+                      src={`https://www.google.com/maps?q=${encodeURIComponent(
+                        SITE_CONFIG.contact.address.store
+                      )}&output=embed`}
+                      className="h-full w-full border-0"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    /> */}
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.312932169006!2d90.4096674751987!3d23.731253778683403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f621647fcf%3A0x6bcbf4197983235!2sJh%20International!5e1!3m2!1sen!2sus!4v1795098212596!5m2!1sen!2sus"
+                      width="600"
+                      height="450"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy={"strict-origin-when-cross-origin"}
+                    ></iframe>
+                  </div>
+                ) : (
+                  <div className="mt-4 flex aspect-video items-center justify-center rounded-xl bg-muted text-xs text-muted-foreground">
+                    Store location is not configured yet.
+                  </div>
+                )}
               </CardContent>
             </Card>
-
-           
 
             <Card className="rounded-xl border-border bg-card py-0 shadow-sm">
               <CardContent className="p-5">
@@ -220,12 +248,12 @@ export default function ContactPage() {
                   Follow Us
                 </h3>
                 <div className="mt-3 flex items-center gap-2">
-                  {socials.map((social) => {
-                    const Icon = social.icon
+                  {SITE_CONFIG.socialLinks.map((social) => {
+                    const Icon = socialIcons[social.key]
                     return (
                       <a
-                        key={social.label}
-                        href="#"
+                        key={social.key}
+                        href={social.href}
                         aria-label={social.label}
                         className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-container text-muted-foreground transition-all hover:bg-primary hover:text-primary-foreground"
                       >

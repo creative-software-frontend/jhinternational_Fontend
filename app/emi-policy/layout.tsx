@@ -1,8 +1,9 @@
+import { SITE_CONFIG } from "@/lib/config/site.config"
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
 
 export const metadata: Metadata = {
-  title: "EMI Policy | TechnoCore Solution",
+  title: `EMI Policy | ${SITE_CONFIG.name}`,
   description:
     "Learn about easy monthly installment plans and flexible EMI options available for tech purchases.",
 }

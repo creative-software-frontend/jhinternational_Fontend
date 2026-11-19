@@ -1,3 +1,4 @@
+import { SITE_CONFIG } from "@/lib/config/site.config"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -13,9 +14,8 @@ import {
 } from "react-icons/fa6"
 
 export const metadata = {
-  title: "Career Opportunities | TechnoCore Solution",
-  description:
-    "Join TechnoCore Solution and build a career in the heart of Bangladesh's tech retail industry.",
+  title: `Career Opportunities | ${SITE_CONFIG.name}`,
+  description: `Join ${SITE_CONFIG.name} and build a career in the heart of Bangladesh's tech retail industry.`,
 }
 
 const benefits = [
@@ -66,8 +66,7 @@ const openings = [
     location: "Dhaka (Hybrid)",
     type: "Full-time",
     experience: "2+ years",
-    description:
-      "Own social media, content calendars, and performance campaigns across the TechnoCore online store.",
+    description: `Own social media, content calendars, and performance campaigns across the ${SITE_CONFIG.shortName} online store.`,
   },
   {
     title: "Customer Support Agent",
@@ -84,8 +83,7 @@ const steps = [
   {
     step: "01",
     title: "Apply Online",
-    description:
-      "Send your CV and a short cover letter to careers@technocoresolution.com.bd",
+    description: `Send your CV and a short cover letter to ${SITE_CONFIG.contact.careersEmail}`,
   },
   {
     step: "02",
@@ -134,7 +132,7 @@ export default function CareerPage() {
               Careers
             </span>
             <h1 className="mt-4 font-heading text-2xl leading-tight font-black tracking-tight text-white sm:text-3xl">
-              Build Your Career With TechnoCore
+              Build Your Career With {SITE_CONFIG.shortName}
             </h1>
             <p className="mt-4 max-w-xl text-base text-inverse-on-surface/85">
               We&apos;re looking for passionate people who love technology as
@@ -235,7 +233,9 @@ export default function CareerPage() {
                     asChild
                     className="bg-primary text-xs font-bold text-primary-foreground hover:bg-primary/90"
                   >
-                    <Link href="mailto:careers@technocoresolution.com.bd?subject=Application: ">
+                    <Link
+                      href={`mailto:${SITE_CONFIG.contact.careersEmail}?subject=Application: `}
+                    >
                       <span>Apply Now</span>
                       <FaArrowRight />
                     </Link>
@@ -279,12 +279,14 @@ export default function CareerPage() {
                   Don&apos;t see the right role?
                 </p>
                 <p className="text-center text-sm font-bold text-foreground sm:text-left">
-                  Send your CV to careers@technocoresolution.com.bd
+                  Send your CV to {SITE_CONFIG.contact.careersEmail}
                 </p>
               </div>
             </div>
             <Button asChild variant="outline" className="text-xs font-semibold">
-              <Link href="mailto:careers@technocoresolution.com.bd?subject=Speculative Application">
+              <Link
+                href={`mailto:${SITE_CONFIG.contact.careersEmail}?subject=Speculative Application`}
+              >
                 <FaHeadset />
                 <span>Drop Us A CV</span>
               </Link>

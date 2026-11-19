@@ -1,3 +1,4 @@
+import { SITE_CONFIG } from "@/lib/config/site.config"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -8,9 +9,8 @@ import {
 } from "react-icons/fa6"
 
 export const metadata = {
-  title: "Privacy Policy | TechnoCore Solution",
-  description:
-    "How TechnoCore Solution collects, uses, and protects your personal information.",
+  title: `Privacy Policy | ${SITE_CONFIG.name}`,
+  description: `How ${SITE_CONFIG.name} collects, uses, and protects your personal information.`,
 }
 
 const sections = [
@@ -108,11 +108,11 @@ export default function PrivacyPage() {
                 </div>
               </div>
               <Link
-                href="mailto:privacy@technocoresolution.com.bd?subject=Privacy Request"
+                href={`mailto:${SITE_CONFIG.contact.privacyEmail}?subject=Privacy Request`}
                 className="inline-flex items-center gap-1 text-xs font-bold text-primary transition-all hover:underline sm:ml-auto"
               >
                 <FaEnvelope />
-                <span>privacy@technocoresolution.com.bd</span>
+                <span>{SITE_CONFIG.contact.privacyEmail}</span>
               </Link>
             </div>
 

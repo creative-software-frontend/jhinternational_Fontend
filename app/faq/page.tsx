@@ -1,5 +1,6 @@
 "use client"
 
+import { SITE_CONFIG } from "@/lib/config/site.config"
 import React, { useState } from "react"
 import Link from "next/link"
 import {
@@ -26,8 +27,7 @@ const faqData = [
     id: "1",
     category: "Orders & Shipping",
     question: "How can I track my order status?",
-    answer:
-      "Once your order is confirmed, you will receive an SMS and email with a tracking link. You can also log into your TechnoCore account and check the 'My Orders' section to see real-time updates on your delivery.",
+    answer: `Once your order is confirmed, you will receive an SMS and email with a tracking link. You can also log into your ${SITE_CONFIG.shortName} account and check the 'My Orders' section to see real-time updates on your delivery.`,
   },
   {
     id: "2",
@@ -60,7 +60,7 @@ const faqData = [
   {
     id: "6",
     category: "PC Builder",
-    question: "Do you assemble the PC if I buy all parts from TechnoCore?",
+    question: `Do you assemble the PC if I buy all parts from ${SITE_CONFIG.shortName}?`,
     answer:
       "Yes! If you purchase all your core components through our PC Builder or store, our expert technicians provide professional assembly, cable management, and stress-testing completely free of charge.",
   },
@@ -74,7 +74,7 @@ const faqData = [
   {
     id: "8",
     category: "General",
-    question: "Are all products listed on TechnoCore 100% genuine?",
+    question: `Are all products listed on ${SITE_CONFIG.shortName} 100% genuine?`,
     answer:
       "Absolutely. We source all our tech products and hardware directly from official authorized distributors and global brands, ensuring 100% authenticity and official warranty support.",
   },

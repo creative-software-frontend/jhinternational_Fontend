@@ -1,8 +1,9 @@
+import { SITE_CONFIG } from "@/lib/config/site.config"
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
 
 export const metadata: Metadata = {
-  title: "Compare Products | TechnoCore Solution",
+  title: `Compare Products | ${SITE_CONFIG.name}`,
   description:
     "Compare specifications, pricing, and features across your favorite computer hardware and accessories.",
 }

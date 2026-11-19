@@ -1,5 +1,6 @@
 "use client"
 
+import { SITE_CONFIG } from "@/lib/config/site.config"
 import { zodResolver } from "@hookform/resolvers/zod"
 import {
   Controller,
@@ -420,7 +421,8 @@ export default function CheckoutPage() {
                           </span>
                         </div>
                         <span className="text-sm font-semibold text-slate-900">
-                          ৳ 79.00
+                          {SITE_CONFIG.currency.symbol}{" "}
+                          {SITE_CONFIG.shipping.insideDhaka.toFixed(2)}
                         </span>
                       </label>
 
@@ -436,7 +438,8 @@ export default function CheckoutPage() {
                           </span>
                         </div>
                         <span className="text-sm font-semibold text-slate-900">
-                          ৳ 119.00
+                          {SITE_CONFIG.currency.symbol}{" "}
+                          {SITE_CONFIG.shipping.outsideDhaka.toFixed(2)}
                         </span>
                       </label>
                     </RadioGroup>
@@ -460,7 +463,9 @@ export default function CheckoutPage() {
                 <div className="flex justify-between text-slate-600">
                   <span>Shipping Charge</span>
                   <span className="font-medium text-slate-900">
-                    {shippingMethod === "inside-dhaka" ? "৳ 79.00" : "৳ 119.00"}
+                    {shippingMethod === "inside-dhaka"
+                      ? `${SITE_CONFIG.currency.symbol} ${SITE_CONFIG.shipping.insideDhaka.toFixed(2)}`
+                      : `${SITE_CONFIG.currency.symbol} ${SITE_CONFIG.shipping.outsideDhaka.toFixed(2)}`}
                   </span>
                 </div>
                 <div className="flex justify-between border-t border-slate-100 pt-3 text-lg font-bold text-slate-900">

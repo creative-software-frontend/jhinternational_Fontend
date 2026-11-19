@@ -802,15 +802,60 @@ export const categories: Category[] = [
             icon: FaHeadphones,
             slug: "headphones",
             children: [
-              { id: "accessories-cable", name: "Cable", icon: FaBolt, slug: "cable" },
-              { id: "accessories-converter", name: "Converter", icon: FaBolt, slug: "converter" },
-              { id: "accessories-combo", name: "Accessories Combo", icon: FaBolt, slug: "accessories-combo" },
-              { id: "accessories-bt-receiver", name: "Bluetooth Receiver", icon: FaBolt, slug: "bluetooth-receiver" },
-              { id: "accessories-rgb-strip", name: "RGB Strip & Controller", icon: FaBolt, slug: "rgb-strip-controller" },
-              { id: "accessories-vga-holder", name: "VGA Holder & Mounts", icon: FaBolt, slug: "vga-holder-mounts" },
-              { id: "accessories-mouse-bungee", name: "Mouse Bungee", icon: FaBolt, slug: "mouse-bungee" },
-              { id: "accessories-console-converter", name: "Console Converter", icon: FaBolt, slug: "console-converter" },
-              { id: "accessories-card-reader", name: "Card Reader", icon: FaBolt, slug: "card-reader" },
+              {
+                id: "accessories-cable",
+                name: "Cable",
+                icon: FaBolt,
+                slug: "cable",
+              },
+              {
+                id: "accessories-converter",
+                name: "Converter",
+                icon: FaBolt,
+                slug: "converter",
+              },
+              {
+                id: "accessories-combo",
+                name: "Accessories Combo",
+                icon: FaBolt,
+                slug: "accessories-combo",
+              },
+              {
+                id: "accessories-bt-receiver",
+                name: "Bluetooth Receiver",
+                icon: FaBolt,
+                slug: "bluetooth-receiver",
+              },
+              {
+                id: "accessories-rgb-strip",
+                name: "RGB Strip & Controller",
+                icon: FaBolt,
+                slug: "rgb-strip-controller",
+              },
+              {
+                id: "accessories-vga-holder",
+                name: "VGA Holder & Mounts",
+                icon: FaBolt,
+                slug: "vga-holder-mounts",
+              },
+              {
+                id: "accessories-mouse-bungee",
+                name: "Mouse Bungee",
+                icon: FaBolt,
+                slug: "mouse-bungee",
+              },
+              {
+                id: "accessories-console-converter",
+                name: "Console Converter",
+                icon: FaBolt,
+                slug: "console-converter",
+              },
+              {
+                id: "accessories-card-reader",
+                name: "Card Reader",
+                icon: FaBolt,
+                slug: "card-reader",
+              },
             ],
           },
           {
@@ -819,9 +864,24 @@ export const categories: Category[] = [
             icon: FaHeadphones,
             slug: "earphone",
             children: [
-              { id: "accessories-wired-earphone", name: "Wired Earphone", icon: FaHeadphones, slug: "wired-earphone" },
-              { id: "accessories-typec-earphone", name: "Type-C Earphone", icon: FaHeadphones, slug: "type-c-earphone" },
-              { id: "accessories-lightning-earphone", name: "Lightning Earphone", icon: FaHeadphones, slug: "lightning-earphone" },
+              {
+                id: "accessories-wired-earphone",
+                name: "Wired Earphone",
+                icon: FaHeadphones,
+                slug: "wired-earphone",
+              },
+              {
+                id: "accessories-typec-earphone",
+                name: "Type-C Earphone",
+                icon: FaHeadphones,
+                slug: "type-c-earphone",
+              },
+              {
+                id: "accessories-lightning-earphone",
+                name: "Lightning Earphone",
+                icon: FaHeadphones,
+                slug: "lightning-earphone",
+              },
             ],
           },
           {
@@ -830,9 +890,24 @@ export const categories: Category[] = [
             icon: FaHeadphones,
             slug: "earbuds",
             children: [
-              { id: "accessories-tws-earbuds", name: "TWS Earbuds", icon: FaHeadphones, slug: "tws-earbuds" },
-              { id: "accessories-anc-earbuds", name: "ANC Earbuds", icon: FaHeadphones, slug: "anc-earbuds" },
-              { id: "accessories-gaming-earbuds", name: "Gaming Earbuds", icon: FaHeadphones, slug: "gaming-earbuds" },
+              {
+                id: "accessories-tws-earbuds",
+                name: "TWS Earbuds",
+                icon: FaHeadphones,
+                slug: "tws-earbuds",
+              },
+              {
+                id: "accessories-anc-earbuds",
+                name: "ANC Earbuds",
+                icon: FaHeadphones,
+                slug: "anc-earbuds",
+              },
+              {
+                id: "accessories-gaming-earbuds",
+                name: "Gaming Earbuds",
+                icon: FaHeadphones,
+                slug: "gaming-earbuds",
+              },
             ],
           },
           {
@@ -841,8 +916,18 @@ export const categories: Category[] = [
             icon: FaHeadphones,
             slug: "neckband",
             children: [
-              { id: "accessories-bt-neckband", name: "Bluetooth Neckband", icon: FaHeadphones, slug: "bluetooth-neckband" },
-              { id: "accessories-sports-neckband", name: "Sports Neckband", icon: FaHeadphones, slug: "sports-neckband" },
+              {
+                id: "accessories-bt-neckband",
+                name: "Bluetooth Neckband",
+                icon: FaHeadphones,
+                slug: "bluetooth-neckband",
+              },
+              {
+                id: "accessories-sports-neckband",
+                name: "Sports Neckband",
+                icon: FaHeadphones,
+                slug: "sports-neckband",
+              },
             ],
           },
           {
@@ -857,9 +942,24 @@ export const categories: Category[] = [
             icon: FaHdd,
             slug: "hubs-docks",
             children: [
-              { id: "accessories-usb-hub", name: "USB Hub", icon: FaHdd, slug: "usb-hub" },
-              { id: "accessories-typec-hub", name: "Type-C Hub", icon: FaHdd, slug: "type-c-hub" },
-              { id: "accessories-tb-dock", name: "Thunderbolt Dock", icon: FaHdd, slug: "thunderbolt-dock" },
+              {
+                id: "accessories-usb-hub",
+                name: "USB Hub",
+                icon: FaHdd,
+                slug: "usb-hub",
+              },
+              {
+                id: "accessories-typec-hub",
+                name: "Type-C Hub",
+                icon: FaHdd,
+                slug: "type-c-hub",
+              },
+              {
+                id: "accessories-tb-dock",
+                name: "Thunderbolt Dock",
+                icon: FaHdd,
+                slug: "thunderbolt-dock",
+              },
             ],
           },
           {
@@ -868,8 +968,18 @@ export const categories: Category[] = [
             icon: FaHdd,
             slug: "drive-enclosures",
             children: [
-              { id: "accessories-m2-enclosure", name: "M.2 NVMe Enclosure", icon: FaHdd, slug: "m2-nvme-enclosure" },
-              { id: "accessories-sata-enclosure", name: "2.5 Inch SATA Enclosure", icon: FaHdd, slug: "sata-enclosure" },
+              {
+                id: "accessories-m2-enclosure",
+                name: "M.2 NVMe Enclosure",
+                icon: FaHdd,
+                slug: "m2-nvme-enclosure",
+              },
+              {
+                id: "accessories-sata-enclosure",
+                name: "2.5 Inch SATA Enclosure",
+                icon: FaHdd,
+                slug: "sata-enclosure",
+              },
             ],
           },
           {
@@ -892,10 +1002,30 @@ export const categories: Category[] = [
         icon: FaKeyboard,
         slug: "mouse",
         children: [
-          { id: "accessories-wired-mouse", name: "Wired Mouse", icon: FaKeyboard, slug: "wired-mouse" },
-          { id: "accessories-wireless-mouse", name: "Wireless Mouse", icon: FaKeyboard, slug: "wireless-mouse" },
-          { id: "accessories-gaming-mouse", name: "Gaming Mouse", icon: FaKeyboard, slug: "gaming-mouse" },
-          { id: "accessories-bluetooth-mouse", name: "Bluetooth Mouse", icon: FaKeyboard, slug: "bluetooth-mouse" },
+          {
+            id: "accessories-wired-mouse",
+            name: "Wired Mouse",
+            icon: FaKeyboard,
+            slug: "wired-mouse",
+          },
+          {
+            id: "accessories-wireless-mouse",
+            name: "Wireless Mouse",
+            icon: FaKeyboard,
+            slug: "wireless-mouse",
+          },
+          {
+            id: "accessories-gaming-mouse",
+            name: "Gaming Mouse",
+            icon: FaKeyboard,
+            slug: "gaming-mouse",
+          },
+          {
+            id: "accessories-bluetooth-mouse",
+            name: "Bluetooth Mouse",
+            icon: FaKeyboard,
+            slug: "bluetooth-mouse",
+          },
         ],
       },
       {
@@ -904,10 +1034,30 @@ export const categories: Category[] = [
         icon: FaKeyboard,
         slug: "keyboard",
         children: [
-          { id: "accessories-mechanical-keyboard", name: "Mechanical Keyboard", icon: FaKeyboard, slug: "mechanical-keyboard" },
-          { id: "accessories-wireless-keyboard", name: "Wireless Keyboard", icon: FaKeyboard, slug: "wireless-keyboard" },
-          { id: "accessories-gaming-keyboard", name: "Gaming Keyboard", icon: FaKeyboard, slug: "gaming-keyboard" },
-          { id: "accessories-custom-keyboards", name: "Custom Keyboards", icon: FaKeyboard, slug: "custom-keyboards" },
+          {
+            id: "accessories-mechanical-keyboard",
+            name: "Mechanical Keyboard",
+            icon: FaKeyboard,
+            slug: "mechanical-keyboard",
+          },
+          {
+            id: "accessories-wireless-keyboard",
+            name: "Wireless Keyboard",
+            icon: FaKeyboard,
+            slug: "wireless-keyboard",
+          },
+          {
+            id: "accessories-gaming-keyboard",
+            name: "Gaming Keyboard",
+            icon: FaKeyboard,
+            slug: "gaming-keyboard",
+          },
+          {
+            id: "accessories-custom-keyboards",
+            name: "Custom Keyboards",
+            icon: FaKeyboard,
+            slug: "custom-keyboards",
+          },
         ],
       },
       {
@@ -916,8 +1066,18 @@ export const categories: Category[] = [
         icon: FaCamera,
         slug: "webcam",
         children: [
-          { id: "accessories-1080p-webcam", name: "1080p Webcams", icon: FaCamera, slug: "1080p-webcam" },
-          { id: "accessories-4k-webcam", name: "4K Webcams", icon: FaCamera, slug: "4k-webcam" },
+          {
+            id: "accessories-1080p-webcam",
+            name: "1080p Webcams",
+            icon: FaCamera,
+            slug: "1080p-webcam",
+          },
+          {
+            id: "accessories-4k-webcam",
+            name: "4K Webcams",
+            icon: FaCamera,
+            slug: "4k-webcam",
+          },
         ],
       },
       {
@@ -926,8 +1086,18 @@ export const categories: Category[] = [
         icon: FaHeadphones,
         slug: "microphone",
         children: [
-          { id: "accessories-usb-microphone", name: "USB Microphone", icon: FaHeadphones, slug: "usb-microphone" },
-          { id: "accessories-condenser-microphone", name: "Condenser Microphone", icon: FaHeadphones, slug: "condenser-microphone" },
+          {
+            id: "accessories-usb-microphone",
+            name: "USB Microphone",
+            icon: FaHeadphones,
+            slug: "usb-microphone",
+          },
+          {
+            id: "accessories-condenser-microphone",
+            name: "Condenser Microphone",
+            icon: FaHeadphones,
+            slug: "condenser-microphone",
+          },
         ],
       },
       {
@@ -936,9 +1106,24 @@ export const categories: Category[] = [
         icon: FaKeyboard,
         slug: "mouse-pad",
         children: [
-          { id: "accessories-gaming-mousepad", name: "Gaming Mousepad", icon: FaKeyboard, slug: "gaming-mousepad" },
-          { id: "accessories-extended-desk-mat", name: "Extended Desk Mat", icon: FaKeyboard, slug: "extended-desk-mat" },
-          { id: "accessories-rgb-mousepad", name: "RGB Mousepad", icon: FaKeyboard, slug: "rgb-mousepad" },
+          {
+            id: "accessories-gaming-mousepad",
+            name: "Gaming Mousepad",
+            icon: FaKeyboard,
+            slug: "gaming-mousepad",
+          },
+          {
+            id: "accessories-extended-desk-mat",
+            name: "Extended Desk Mat",
+            icon: FaKeyboard,
+            slug: "extended-desk-mat",
+          },
+          {
+            id: "accessories-rgb-mousepad",
+            name: "RGB Mousepad",
+            icon: FaKeyboard,
+            slug: "rgb-mousepad",
+          },
         ],
       },
       {
@@ -947,8 +1132,18 @@ export const categories: Category[] = [
         icon: FaGamepad,
         slug: "gamepad",
         children: [
-          { id: "accessories-pc-gamepad", name: "PC Gamepad", icon: FaGamepad, slug: "pc-gamepad" },
-          { id: "accessories-wireless-controller", name: "Wireless Controller", icon: FaGamepad, slug: "wireless-controller" },
+          {
+            id: "accessories-pc-gamepad",
+            name: "PC Gamepad",
+            icon: FaGamepad,
+            slug: "pc-gamepad",
+          },
+          {
+            id: "accessories-wireless-controller",
+            name: "Wireless Controller",
+            icon: FaGamepad,
+            slug: "wireless-controller",
+          },
         ],
       },
       {
@@ -957,8 +1152,18 @@ export const categories: Category[] = [
         icon: FaHdd,
         slug: "pen-drive",
         children: [
-          { id: "accessories-usb3-pendrive", name: "USB 3.0 Pen Drive", icon: FaHdd, slug: "usb-3-pen-drive" },
-          { id: "accessories-typec-pendrive", name: "Type-C Dual Drive", icon: FaHdd, slug: "type-c-dual-drive" },
+          {
+            id: "accessories-usb3-pendrive",
+            name: "USB 3.0 Pen Drive",
+            icon: FaHdd,
+            slug: "usb-3-pen-drive",
+          },
+          {
+            id: "accessories-typec-pendrive",
+            name: "Type-C Dual Drive",
+            icon: FaHdd,
+            slug: "type-c-dual-drive",
+          },
         ],
       },
       {
@@ -967,8 +1172,18 @@ export const categories: Category[] = [
         icon: FaMemory,
         slug: "memory-card",
         children: [
-          { id: "accessories-micro-sd", name: "Micro SD Card", icon: FaMemory, slug: "micro-sd-card" },
-          { id: "accessories-sd-card", name: "SD Card", icon: FaMemory, slug: "sd-card" },
+          {
+            id: "accessories-micro-sd",
+            name: "Micro SD Card",
+            icon: FaMemory,
+            slug: "micro-sd-card",
+          },
+          {
+            id: "accessories-sd-card",
+            name: "SD Card",
+            icon: FaMemory,
+            slug: "sd-card",
+          },
         ],
       },
     ],
@@ -986,10 +1201,30 @@ export const categories: Category[] = [
         icon: FaMobileAlt,
         slug: "smartphones",
         children: [
-          { id: "phone-apple", name: "Apple iPhone", icon: FaMobileAlt, slug: "apple-iphone" },
-          { id: "phone-samsung", name: "Samsung Galaxy", icon: FaMobileAlt, slug: "samsung-galaxy" },
-          { id: "phone-xiaomi", name: "Xiaomi", icon: FaMobileAlt, slug: "xiaomi" },
-          { id: "phone-google", name: "Google Pixel", icon: FaMobileAlt, slug: "google-pixel" },
+          {
+            id: "phone-apple",
+            name: "Apple iPhone",
+            icon: FaMobileAlt,
+            slug: "apple-iphone",
+          },
+          {
+            id: "phone-samsung",
+            name: "Samsung Galaxy",
+            icon: FaMobileAlt,
+            slug: "samsung-galaxy",
+          },
+          {
+            id: "phone-xiaomi",
+            name: "Xiaomi",
+            icon: FaMobileAlt,
+            slug: "xiaomi",
+          },
+          {
+            id: "phone-google",
+            name: "Google Pixel",
+            icon: FaMobileAlt,
+            slug: "google-pixel",
+          },
         ],
       },
       {
@@ -998,9 +1233,24 @@ export const categories: Category[] = [
         icon: FaMobileAlt,
         slug: "tablets",
         children: [
-          { id: "tab-ipad", name: "Apple iPad", icon: FaMobileAlt, slug: "apple-ipad" },
-          { id: "tab-samsung", name: "Samsung Tab", icon: FaMobileAlt, slug: "samsung-tab" },
-          { id: "tab-graphics", name: "Drawing Tablets", icon: FaMobileAlt, slug: "drawing-tablets" },
+          {
+            id: "tab-ipad",
+            name: "Apple iPad",
+            icon: FaMobileAlt,
+            slug: "apple-ipad",
+          },
+          {
+            id: "tab-samsung",
+            name: "Samsung Tab",
+            icon: FaMobileAlt,
+            slug: "samsung-tab",
+          },
+          {
+            id: "tab-graphics",
+            name: "Drawing Tablets",
+            icon: FaMobileAlt,
+            slug: "drawing-tablets",
+          },
         ],
       },
       {
@@ -1009,9 +1259,24 @@ export const categories: Category[] = [
         icon: FaMobileAlt,
         slug: "mobile-accessories",
         children: [
-          { id: "phone-cases", name: "Cases & Covers", icon: FaMobileAlt, slug: "cases-covers" },
-          { id: "phone-chargers", name: "Fast Chargers", icon: FaBolt, slug: "fast-chargers" },
-          { id: "phone-powerbanks", name: "Power Banks", icon: FaBolt, slug: "power-banks" },
+          {
+            id: "phone-cases",
+            name: "Cases & Covers",
+            icon: FaMobileAlt,
+            slug: "cases-covers",
+          },
+          {
+            id: "phone-chargers",
+            name: "Fast Chargers",
+            icon: FaBolt,
+            slug: "fast-chargers",
+          },
+          {
+            id: "phone-powerbanks",
+            name: "Power Banks",
+            icon: FaBolt,
+            slug: "power-banks",
+          },
         ],
       },
     ],
@@ -1029,9 +1294,24 @@ export const categories: Category[] = [
         icon: FaWifi,
         slug: "routers",
         children: [
-          { id: "router-wifi6", name: "Wi-Fi 6 Routers", icon: FaWifi, slug: "wifi-6-routers" },
-          { id: "router-mesh", name: "Mesh Wi-Fi Systems", icon: FaWifi, slug: "mesh-wifi" },
-          { id: "router-gaming", name: "Gaming Routers", icon: FaWifi, slug: "gaming-routers" },
+          {
+            id: "router-wifi6",
+            name: "Wi-Fi 6 Routers",
+            icon: FaWifi,
+            slug: "wifi-6-routers",
+          },
+          {
+            id: "router-mesh",
+            name: "Mesh Wi-Fi Systems",
+            icon: FaWifi,
+            slug: "mesh-wifi",
+          },
+          {
+            id: "router-gaming",
+            name: "Gaming Routers",
+            icon: FaWifi,
+            slug: "gaming-routers",
+          },
         ],
       },
       {
@@ -1040,8 +1320,18 @@ export const categories: Category[] = [
         icon: FaWifi,
         slug: "network-switches",
         children: [
-          { id: "switch-gigabit", name: "Gigabit Switches", icon: FaWifi, slug: "gigabit-switches" },
-          { id: "switch-poe", name: "PoE Switches", icon: FaWifi, slug: "poe-switches" },
+          {
+            id: "switch-gigabit",
+            name: "Gigabit Switches",
+            icon: FaWifi,
+            slug: "gigabit-switches",
+          },
+          {
+            id: "switch-poe",
+            name: "PoE Switches",
+            icon: FaWifi,
+            slug: "poe-switches",
+          },
         ],
       },
       {
@@ -1050,8 +1340,18 @@ export const categories: Category[] = [
         icon: FaWifi,
         slug: "network-adapters",
         children: [
-          { id: "adapter-pcie", name: "PCIe Wi-Fi Cards", icon: FaWifi, slug: "pcie-wifi-cards" },
-          { id: "adapter-usb", name: "USB Wi-Fi Adapters", icon: FaWifi, slug: "usb-wifi-adapters" },
+          {
+            id: "adapter-pcie",
+            name: "PCIe Wi-Fi Cards",
+            icon: FaWifi,
+            slug: "pcie-wifi-cards",
+          },
+          {
+            id: "adapter-usb",
+            name: "USB Wi-Fi Adapters",
+            icon: FaWifi,
+            slug: "usb-wifi-adapters",
+          },
         ],
       },
     ],
@@ -1069,8 +1369,18 @@ export const categories: Category[] = [
         icon: FaPrint,
         slug: "printers",
         children: [
-          { id: "printer-laser", name: "Laser Printers", icon: FaPrint, slug: "laser-printers" },
-          { id: "printer-inktank", name: "All-in-One Ink Tank", icon: FaPrint, slug: "ink-tank-printers" },
+          {
+            id: "printer-laser",
+            name: "Laser Printers",
+            icon: FaPrint,
+            slug: "laser-printers",
+          },
+          {
+            id: "printer-inktank",
+            name: "All-in-One Ink Tank",
+            icon: FaPrint,
+            slug: "ink-tank-printers",
+          },
         ],
       },
       {
@@ -1079,8 +1389,18 @@ export const categories: Category[] = [
         icon: FaPrint,
         slug: "scanners",
         children: [
-          { id: "scanner-flatbed", name: "Flatbed Scanners", icon: FaPrint, slug: "flatbed-scanners" },
-          { id: "scanner-document", name: "Document Scanners", icon: FaPrint, slug: "document-scanners" },
+          {
+            id: "scanner-flatbed",
+            name: "Flatbed Scanners",
+            icon: FaPrint,
+            slug: "flatbed-scanners",
+          },
+          {
+            id: "scanner-document",
+            name: "Document Scanners",
+            icon: FaPrint,
+            slug: "document-scanners",
+          },
         ],
       },
       {
@@ -1089,8 +1409,18 @@ export const categories: Category[] = [
         icon: FaTv,
         slug: "projectors",
         children: [
-          { id: "projector-home", name: "Home Cinema Projectors", icon: FaTv, slug: "home-cinema-projectors" },
-          { id: "projector-portable", name: "Portable Mini Projectors", icon: FaTv, slug: "portable-projectors" },
+          {
+            id: "projector-home",
+            name: "Home Cinema Projectors",
+            icon: FaTv,
+            slug: "home-cinema-projectors",
+          },
+          {
+            id: "projector-portable",
+            name: "Portable Mini Projectors",
+            icon: FaTv,
+            slug: "portable-projectors",
+          },
         ],
       },
     ],
@@ -1108,9 +1438,24 @@ export const categories: Category[] = [
         icon: FaBolt,
         slug: "smart-watch",
         children: [
-          { id: "watch-apple", name: "Apple Watch", icon: FaBolt, slug: "apple-watch" },
-          { id: "watch-samsung", name: "Galaxy Watch", icon: FaBolt, slug: "galaxy-watch" },
-          { id: "watch-fitness", name: "Fitness Trackers", icon: FaBolt, slug: "fitness-trackers" },
+          {
+            id: "watch-apple",
+            name: "Apple Watch",
+            icon: FaBolt,
+            slug: "apple-watch",
+          },
+          {
+            id: "watch-samsung",
+            name: "Galaxy Watch",
+            icon: FaBolt,
+            slug: "galaxy-watch",
+          },
+          {
+            id: "watch-fitness",
+            name: "Fitness Trackers",
+            icon: FaBolt,
+            slug: "fitness-trackers",
+          },
         ],
       },
       {
@@ -1119,9 +1464,24 @@ export const categories: Category[] = [
         icon: FaTv,
         slug: "tv-box-streaming",
         children: [
-          { id: "gadget-appletv", name: "Apple TV 4K", icon: FaTv, slug: "apple-tv" },
-          { id: "gadget-chromecast", name: "Google TV / Chromecast", icon: FaTv, slug: "chromecast" },
-          { id: "gadget-mibox", name: "Xiaomi Mi Box", icon: FaTv, slug: "mi-box" },
+          {
+            id: "gadget-appletv",
+            name: "Apple TV 4K",
+            icon: FaTv,
+            slug: "apple-tv",
+          },
+          {
+            id: "gadget-chromecast",
+            name: "Google TV / Chromecast",
+            icon: FaTv,
+            slug: "chromecast",
+          },
+          {
+            id: "gadget-mibox",
+            name: "Xiaomi Mi Box",
+            icon: FaTv,
+            slug: "mi-box",
+          },
         ],
       },
     ],
@@ -1139,9 +1499,24 @@ export const categories: Category[] = [
         icon: FaCamera,
         slug: "dslr-mirrorless",
         children: [
-          { id: "cam-sony", name: "Sony Alpha", icon: FaCamera, slug: "sony-alpha" },
-          { id: "cam-canon", name: "Canon EOS", icon: FaCamera, slug: "canon-eos" },
-          { id: "cam-fuji", name: "Fujifilm X", icon: FaCamera, slug: "fujifilm-x" },
+          {
+            id: "cam-sony",
+            name: "Sony Alpha",
+            icon: FaCamera,
+            slug: "sony-alpha",
+          },
+          {
+            id: "cam-canon",
+            name: "Canon EOS",
+            icon: FaCamera,
+            slug: "canon-eos",
+          },
+          {
+            id: "cam-fuji",
+            name: "Fujifilm X",
+            icon: FaCamera,
+            slug: "fujifilm-x",
+          },
         ],
       },
       {
@@ -1150,9 +1525,24 @@ export const categories: Category[] = [
         icon: FaCamera,
         slug: "action-cameras",
         children: [
-          { id: "cam-gopro", name: "GoPro HERO", icon: FaCamera, slug: "gopro-hero" },
-          { id: "cam-dji", name: "DJI Osmo Action", icon: FaCamera, slug: "dji-osmo-action" },
-          { id: "cam-insta360", name: "Insta360", icon: FaCamera, slug: "insta360" },
+          {
+            id: "cam-gopro",
+            name: "GoPro HERO",
+            icon: FaCamera,
+            slug: "gopro-hero",
+          },
+          {
+            id: "cam-dji",
+            name: "DJI Osmo Action",
+            icon: FaCamera,
+            slug: "dji-osmo-action",
+          },
+          {
+            id: "cam-insta360",
+            name: "Insta360",
+            icon: FaCamera,
+            slug: "insta360",
+          },
         ],
       },
       {
@@ -1161,8 +1551,18 @@ export const categories: Category[] = [
         icon: FaCamera,
         slug: "security-cameras",
         children: [
-          { id: "cam-wifi-cctv", name: "360° Wi-Fi IP Camera", icon: FaCamera, slug: "wifi-ip-camera" },
-          { id: "cam-outdoor-cctv", name: "Outdoor CCTV Bullet", icon: FaCamera, slug: "outdoor-cctv" },
+          {
+            id: "cam-wifi-cctv",
+            name: "360° Wi-Fi IP Camera",
+            icon: FaCamera,
+            slug: "wifi-ip-camera",
+          },
+          {
+            id: "cam-outdoor-cctv",
+            name: "Outdoor CCTV Bullet",
+            icon: FaCamera,
+            slug: "outdoor-cctv",
+          },
         ],
       },
     ],
