@@ -26,17 +26,17 @@ const contacts = [
   {
     icon: FaPhoneAlt,
     title: "Hotline",
-    lines: ["16580 / 09678-002003", "Sun - Sat: 10:00 AM - 9:00 PM"],
+    lines: ["01711976179, 01758714353", "Sat -Thu : 9 :00  AM - 8: 00 PM"],
   },
   {
     icon: FaEnvelope,
     title: "Email Support",
-    lines: ["support@technocoresolution.com.bd", "Response within 24 hours"],
+    lines: ["jhinternational786@gmail.com", "Response within 24 hours"],
   },
   {
     icon: FaMapMarkerAlt,
     title: "Head Office",
-    lines: ["AG Castle, 6th Floor", "IDB Bhaban Rd, Dhaka 1207"],
+    lines: ["51,51/A Resourceful Paltan City (Ground Floor)", " Purana Paltan, Dhaka-1000"],
   },
 ]
 
@@ -204,7 +204,7 @@ export default function ContactPage() {
                   Visit Our Flagship Store
                 </h3>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  AG Castle, 6th Floor, IDB Bhaban Rd, Dhaka 1207
+                  51,51/A Resourceful Paltan City (Ground Floor), Purana Paltan, Dhaka-1000
                 </p>
                 <div className="mt-4 flex aspect-video items-center justify-center rounded-xl bg-muted text-xs text-muted-foreground">
                   Map Preview Coming Soon
@@ -212,33 +212,7 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card className="rounded-xl border-border bg-card py-0 shadow-sm">
-              <CardContent className="p-5">
-                <h3 className="font-heading text-sm font-bold text-foreground sm:text-base">
-                  Business Hours
-                </h3>
-                <div className="mt-3 space-y-2 text-xs">
-                  <div className="flex items-center justify-between">
-                    <span className="flex items-center gap-2 text-muted-foreground">
-                      <FaClock className="text-primary" />
-                      Saturday - Thursday
-                    </span>
-                    <span className="font-semibold text-foreground">
-                      10:00 AM - 9:00 PM
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="flex items-center gap-2 text-muted-foreground">
-                      <FaClock className="text-primary" />
-                      Friday
-                    </span>
-                    <span className="font-semibold text-foreground">
-                      3:00 PM - 9:00 PM
-                    </span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+           
 
             <Card className="rounded-xl border-border bg-card py-0 shadow-sm">
               <CardContent className="p-5">

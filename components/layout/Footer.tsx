@@ -49,23 +49,23 @@ export default function Footer() {
             </Link>
             <p className="text-xs leading-relaxed text-muted-foreground">
               Bangladesh&apos;s premier retail destination for high-end gaming
-              rigs, custom water cooling, and professional components.
+              Devices and Computer Accessories.
             </p>
             <div className="flex flex-col gap-2 text-xs text-muted-foreground">
               <div className="flex items-center gap-2">
                 <FaPhoneAlt className="shrink-0 text-primary" />
                 <span>
-                  Hotline: <strong className="text-foreground">16580</strong> /
-                  09678-002003
-                </span>
+                  Hotline: <strong className="text-foreground">01711976179,01758714353</strong>
+                      
+                   </span>
               </div>
               <div className="flex items-center gap-2">
                 <FaEnvelope className="shrink-0 text-primary" />
-                <span>Support: support@technocoresolution.com.bd</span>
+                <span>Support: jhinternational786@gmail.com</span>
               </div>
               <div className="flex items-start gap-2">
                 <FaMapMarkerAlt className="mt-0.5 shrink-0 text-primary" />
-                <span>AG Castle, 6th Floor, IDB Bhaban Rd, Dhaka 1207</span>
+                <span>51,51/A Resourceful Paltan City (Ground Floor), Purana Paltan, Dhaka-1000</span>
               </div>
             </div>
           </div>
@@ -295,7 +295,7 @@ export default function Footer() {
         {/* Bottom Bar: Copyright & Payment Partners */}
         <div className="flex flex-col items-center justify-between gap-4 pt-8 text-xs text-muted-foreground md:flex-row">
           <p>
-            &copy; {new Date().getFullYear()} TechnoCore Solution Ltd. All
+            &copy; {new Date().getFullYear()} JH International. All
             rights reserved.
           </p>
 

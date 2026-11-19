@@ -51,13 +51,13 @@ export default function Header() {
             >
               <FaPhone className="size-4" />
               <span>Hotline:</span>
-              <strong>16580</strong>
-              <span className="hidden sm:inline">/ 09678-002003</span>
+              <strong>01711976179</strong>
+              <span className="hidden sm:inline">/ 01758714353</span>
             </a>
 
             <span className="hidden items-center gap-1.5 opacity-75 md:flex">
               <FaClock className="size-4" />
-              Sat - Thu: 9:30 AM - 8:00 PM
+              Sat -Thu : 9 :00  AM - 8: 00 PM
             </span>
           </div>
           <div className="flex items-center gap-3">
