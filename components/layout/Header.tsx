@@ -13,6 +13,9 @@ import {
   FaArrowRightArrowLeft,
   FaUser,
   FaFireFlameCurved,
+  FaChevronDown,
+  FaDesktop,
+  FaVideo,
 } from "react-icons/fa6"
 
 import { Button } from "../ui/button"
@@ -20,6 +23,12 @@ import { Input } from "../ui/input"
 import { Badge } from "../ui/badge"
 import { Separator } from "../ui/separator"
 import { Avatar, AvatarFallback } from "../ui/avatar"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu"
 import { FaRegHeart } from "react-icons/fa"
 import CategoriesSidebar from "./CategoriesSidebar"
 import Image from "next/image"
@@ -27,6 +36,7 @@ import LogoImage from "@/public/images/logo.png"
 import HeaderCartButton from "../ui/HeaderCartButton"
 import { useShop } from "@/context/ShopContext"
 import { useAuth } from "@/context/AuthContext"
+import { LuGift } from "react-icons/lu"
 
 const trendingKeywords: string[] = [
   "RTX 4080 Super",
@@ -40,7 +50,7 @@ export default function Header() {
   const { openLoginModal } = useAuth()
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b bg-background/95 shadow-xs backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b bg-foreground shadow-xs backdrop-blur-md">
       {/* 1. Utility Bar */}
       <div className="bg-foreground text-background">
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-between gap-2 px-4 text-xs font-medium sm:gap-4 sm:px-6 lg:px-8">
@@ -100,8 +110,8 @@ export default function Header() {
       </div>
 
       {/* 2. Brand, Search and Actions */}
-      <div className="border-b bg-card">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="border-b bg-foreground text-background">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Brand */}
           <Link
             href="/"
@@ -109,7 +119,7 @@ export default function Header() {
             aria-label={`${SITE_CONFIG.name} home`}
           >
             {/* logo */}
-            <Image src={LogoImage} alt="Logo" width={200} height={200} />
+            <Image src={LogoImage} alt="Logo" width={300} height={300} />
           </Link>
           <div className="flex flex-1 items-center justify-end pt-3">
             {/* Search */}
@@ -118,7 +128,7 @@ export default function Header() {
                 action="/search"
                 method="GET"
                 role="search"
-                className="flex items-center gap-2 rounded-lg border bg-muted/50 transition-colors focus-within:border-primary"
+                className="flex items-center gap-2 rounded-lg border bg-background transition-colors focus-within:border-primary"
               >
                 <label htmlFor="desktop-search" className="sr-only">
                   Search products
@@ -129,7 +139,7 @@ export default function Header() {
                   name="q"
                   type="search"
                   placeholder="Search components, laptops, displays..."
-                  className="h-9 border-0 bg-transparent shadow-none focus-visible:ring-0"
+                  className="h-9 border-0 bg-background shadow-none focus-visible:ring-0"
                 />
 
                 <Button
@@ -142,7 +152,7 @@ export default function Header() {
               </form>
 
               {/* Trending Keywords */}
-              <div className="flex items-center gap-2 overflow-hidden text-xs whitespace-nowrap">
+              {/* <div className="flex items-center gap-2 overflow-hidden text-xs whitespace-nowrap">
                 <span className="shrink-0 text-sm font-bold text-muted-foreground uppercase">
                   Trending:
                 </span>
@@ -156,7 +166,7 @@ export default function Header() {
                     {keyword}
                   </Link>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Header Actions */}
@@ -173,18 +183,54 @@ export default function Header() {
                   <FaMagnifyingGlass className="size-5" />
                 </Link>
               </Button>
-
-              {/* PC Builder */}
+              {/* offers */}
               <Button
                 asChild
-                variant="outline"
-                className="hidden border-primary/30 bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground sm:inline-flex"
+                // variant="default"
+                className="hidden border-primary/30 bg-primary text-white sm:inline-flex"
               >
                 <Link href="/pc-builder">
-                  <FaScrewdriverWrench className="size-4" />
-                  PC Builder
+                  <LuGift className="size-4" />
+                  Offers
                 </Link>
               </Button>
+
+              {/* PC Builder */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button className="hidden border-primary/30 bg-primary text-white sm:inline-flex">
+                    <FaScrewdriverWrench className="size-4" />
+                    System Builder
+                    <FaChevronDown className="ml-1 size-3" />
+                  </Button>
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent
+                  align="end"
+                  sideOffset={8}
+                  className="w-56 rounded-md"
+                >
+                  <DropdownMenuItem
+                    asChild
+                    className="cursor-pointer gap-3 px-3 py-2.5"
+                  >
+                    <Link href="/pc-builder">
+                      <FaDesktop className="size-5" />
+                      <span className="font-semibold">PC BUILDER</span>
+                    </Link>
+                  </DropdownMenuItem>
+
+                  <DropdownMenuItem
+                    asChild
+                    className="cursor-pointer gap-3 px-3 py-2.5"
+                  >
+                    <Link href="/cc-builder">
+                      <FaVideo className="size-5" />
+                      <span className="font-semibold">CC BUILDER</span>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
               {/* Compare */}
               <Button asChild variant="ghost" size="icon" className="relative">
@@ -199,7 +245,7 @@ export default function Header() {
               </Button>
 
               {/* favorite list */}
-              <Button asChild variant="ghost" size="icon" className="relative">
+              {/* <Button asChild variant="ghost" size="icon" className="relative">
                 <Link href="/favorites" aria-label="favorites">
                   <FaRegHeart className="size-5" />
                   {favoriteItemCount > 0 && (
@@ -211,10 +257,10 @@ export default function Header() {
                     </Badge>
                   )}
                 </Link>
-              </Button>
+              </Button> */}
 
               {/* Cart */}
-              <HeaderCartButton />
+              {/* <HeaderCartButton /> */}
 
               {/* User */}
 
@@ -238,7 +284,7 @@ export default function Header() {
       </div>
 
       {/* 3. Categories and Navigation */}
-      <div className="relative border-b bg-card shadow-xs">
+      <div className="relative border-b bg-foreground shadow-xs *:text-background!">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
           <div className="flex min-w-0 flex-1 items-center">
             {/* Categories Navigation Bar (Desktop & Mobile) */}
