@@ -163,89 +163,89 @@ export const categories: Category[] = [
       },
     ],
   },
-  {
-    id: "desktop-pc",
-    name: "Desktop",
-    icon: FaDesktop,
-    slug: "desktop-pc",
-    productCount: 168,
-    children: [
-      {
-        id: "desktop-pc-gaming",
-        name: "Gaming PCs",
-        icon: FaDesktop,
-        slug: "gaming",
-        children: [
-          {
-            id: "desktop-pc-gaming-ready",
-            name: "Ready-to-Ship",
-            icon: FaDesktop,
-            slug: "ready-to-ship",
-            children: [
-              {
-                id: "desktop-pc-gaming-ready-intel",
-                name: "Intel Builds",
-                icon: FaDesktop,
-                slug: "intel",
-              },
-              {
-                id: "desktop-pc-gaming-ready-amd",
-                name: "AMD Builds",
-                icon: FaDesktop,
-                slug: "amd",
-              },
-            ],
-          },
-          {
-            id: "desktop-pc-gaming-custom",
-            name: "Custom Build",
-            icon: FaDesktop,
-            slug: "custom",
-          },
-        ],
-      },
-      {
-        id: "desktop-pc-office",
-        name: "Office PCs",
-        icon: FaDesktop,
-        slug: "office",
-        children: [
-          {
-            id: "desktop-pc-office-mini",
-            name: "Mini PCs",
-            icon: FaDesktop,
-            slug: "mini",
-          },
-          {
-            id: "desktop-pc-office-tower",
-            name: "Tower PCs",
-            icon: FaDesktop,
-            slug: "tower",
-          },
-        ],
-      },
-      {
-        id: "desktop-pc-all-in-one",
-        name: "All-in-One PCs",
-        icon: FaDesktop,
-        slug: "all-in-one",
-        children: [
-          {
-            id: "desktop-pc-all-in-one-imac",
-            name: "Apple iMac",
-            icon: FaDesktop,
-            slug: "imac",
-          },
-          {
-            id: "desktop-pc-all-in-one-windows",
-            name: "Windows AIO",
-            icon: FaDesktop,
-            slug: "windows",
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: "desktop-pc",
+  //   name: "Desktop",
+  //   icon: FaDesktop,
+  //   slug: "desktop-pc",
+  //   productCount: 168,
+  //   children: [
+  //     {
+  //       id: "desktop-pc-gaming",
+  //       name: "Gaming PCs",
+  //       icon: FaDesktop,
+  //       slug: "gaming",
+  //       children: [
+  //         {
+  //           id: "desktop-pc-gaming-ready",
+  //           name: "Ready-to-Ship",
+  //           icon: FaDesktop,
+  //           slug: "ready-to-ship",
+  //           children: [
+  //             {
+  //               id: "desktop-pc-gaming-ready-intel",
+  //               name: "Intel Builds",
+  //               icon: FaDesktop,
+  //               slug: "intel",
+  //             },
+  //             {
+  //               id: "desktop-pc-gaming-ready-amd",
+  //               name: "AMD Builds",
+  //               icon: FaDesktop,
+  //               slug: "amd",
+  //             },
+  //           ],
+  //         },
+  //         {
+  //           id: "desktop-pc-gaming-custom",
+  //           name: "Custom Build",
+  //           icon: FaDesktop,
+  //           slug: "custom",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       id: "desktop-pc-office",
+  //       name: "Office PCs",
+  //       icon: FaDesktop,
+  //       slug: "office",
+  //       children: [
+  //         {
+  //           id: "desktop-pc-office-mini",
+  //           name: "Mini PCs",
+  //           icon: FaDesktop,
+  //           slug: "mini",
+  //         },
+  //         {
+  //           id: "desktop-pc-office-tower",
+  //           name: "Tower PCs",
+  //           icon: FaDesktop,
+  //           slug: "tower",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       id: "desktop-pc-all-in-one",
+  //       name: "All-in-One PCs",
+  //       icon: FaDesktop,
+  //       slug: "all-in-one",
+  //       children: [
+  //         {
+  //           id: "desktop-pc-all-in-one-imac",
+  //           name: "Apple iMac",
+  //           icon: FaDesktop,
+  //           slug: "imac",
+  //         },
+  //         {
+  //           id: "desktop-pc-all-in-one-windows",
+  //           name: "Windows AIO",
+  //           icon: FaDesktop,
+  //           slug: "windows",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: "gaming-console",
     name: "Gaming Console",

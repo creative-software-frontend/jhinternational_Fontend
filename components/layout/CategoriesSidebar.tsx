@@ -409,7 +409,7 @@ function DesktopCategoryNav() {
       className="relative flex w-full min-w-0 items-center"
     >
       {/* বাম পাশের স্ক্রল অ্যারো বাটন */}
-      {canScrollLeft && (
+      {/* {canScrollLeft && (
         <div className="absolute left-0 z-30 flex items-center bg-linear-to-r from-card via-card/90 to-transparent pr-6">
           <Button
             type="button"
@@ -422,7 +422,7 @@ function DesktopCategoryNav() {
             <FaChevronLeft className="size-3" />
           </Button>
         </div>
-      )}
+      )} */}
 
       {/* হরাইজন্টাল স্ক্রলযোগ্য ক্যাটেগরি লিস্ট (এক লাইনে থাকবে, ভাঙবে না) */}
       <div
@@ -450,8 +450,8 @@ function DesktopCategoryNav() {
                 className={cn(
                   "relative flex items-center px-3.5 py-2.5 text-xs font-semibold transition-colors select-none xl:text-[13px]",
                   isOpen
-                    ? "rounded-md bg-primary/8 font-bold text-primary"
-                    : "text-foreground/85 hover:bg-primary/5 hover:text-primary"
+                    ? "rounded-md bg-primary/8 font-bold text-background"
+                    : "hover:bg-primary/20 hover:text-background"
                 )}
               >
                 {/* অ্যাক্টিভ ইন্ডিকেটর বার (রেফারেন্স ইমেজের মতো নীল টপ বার) */}
@@ -469,7 +469,7 @@ function DesktopCategoryNav() {
       </div>
 
       {/* ডান পাশের স্ক্রল অ্যারো বাটন */}
-      {canScrollRight && (
+      {/* {canScrollRight && (
         <div className="absolute right-0 z-30 flex items-center bg-linear-to-l from-card via-card/90 to-transparent pl-6">
           <Button
             type="button"
@@ -482,7 +482,7 @@ function DesktopCategoryNav() {
             <FaChevronRight className="size-3" />
           </Button>
         </div>
-      )}
+      )} */}
 
       {/* ড্রপডাউন মেনু (স্ক্রল কন্টেইনারের বাইরে থাকায় কোনো ক্লিপিং হয় না) */}
       {activeCategory &&
