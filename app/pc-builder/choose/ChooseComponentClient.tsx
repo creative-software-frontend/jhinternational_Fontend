@@ -7,11 +7,13 @@ import ProductListing from "@/components/ProductListing"
 
 type ChooseComponentClientProps = {
   category: string
+  categoryName?: string
   productsPromise: Promise<Product[]>
 }
 
 export default function ChooseComponentClient({
   category,
+  categoryName,
   productsPromise,
 }: ChooseComponentClientProps) {
   const router = useRouter()
@@ -32,11 +34,11 @@ export default function ChooseComponentClient({
   return (
     <ProductListing
       mode="build"
-      title={`Choose ${category.toUpperCase()}`}
+      title={`Choose ${categoryName ?? category.toUpperCase()}`}
       breadcrumbs={[
         { name: "PC Builder", url: "/pc-builder" },
         {
-          name: category,
+          name: categoryName ?? category,
           url: `/pc-builder/choose?cat=${category}`,
           active: true,
         },

@@ -50,9 +50,9 @@ export default function Header() {
   const { openLoginModal } = useAuth()
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b bg-foreground shadow-xs backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-inverse-surface bg-inverse-surface shadow-xs backdrop-blur-md">
       {/* 1. Utility Bar */}
-      <div className="bg-foreground text-background">
+      <div className="bg-inverse-surface text-inverse-on-surface">
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-between gap-2 px-4 text-xs font-medium sm:gap-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-6">
             <a
@@ -84,7 +84,7 @@ export default function Header() {
 
             <Separator
               orientation="vertical"
-              className="hidden h-4 bg-background/30 min-[390px]:flex"
+              className="hidden h-4 bg-inverse-on-surface/30 min-[390px]:flex"
             />
 
             <Link
@@ -97,7 +97,7 @@ export default function Header() {
 
             <Separator
               orientation="vertical"
-              className="hidden h-4 bg-background/30 sm:flex"
+              className="hidden h-4 bg-inverse-on-surface/30 sm:flex"
             />
 
             <span className="hidden items-center gap-1 sm:flex">
@@ -110,7 +110,7 @@ export default function Header() {
       </div>
 
       {/* 2. Brand, Search and Actions */}
-      <div className="border-b bg-foreground text-background">
+      <div className="border-b border-inverse-surface/80 bg-inverse-surface text-inverse-on-surface">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Brand */}
           <Link
@@ -121,14 +121,14 @@ export default function Header() {
             {/* logo */}
             <Image src={LogoImage} alt="Logo" width={300} height={300} />
           </Link>
-          <div className="flex flex-1 items-center justify-end pt-3">
+          <div className="flex flex-1 pt-3">
             {/* Search */}
             <div className="mx-2 hidden max-w-2xl flex-1 flex-col gap-1 lg:flex">
               <form
                 action="/search"
                 method="GET"
                 role="search"
-                className="flex items-center gap-2 rounded-lg border bg-background transition-colors focus-within:border-primary"
+                className="flex items-center rounded-lg transition-colors focus-within:border-primary"
               >
                 <label htmlFor="desktop-search" className="sr-only">
                   Search products
@@ -139,7 +139,7 @@ export default function Header() {
                   name="q"
                   type="search"
                   placeholder="Search components, laptops, displays..."
-                  className="h-9 border-0 bg-background shadow-none focus-visible:ring-0"
+                  className="h-9 rounded-md rounded-r-none border-0 bg-background shadow-none outline-0 focus-visible:ring-0"
                 />
 
                 <Button
@@ -170,7 +170,7 @@ export default function Header() {
             </div>
 
             {/* Header Actions */}
-            <div className="-mt-1.5 flex shrink-0 items-center gap-1 self-start sm:gap-2">
+            <div className="flex shrink-0 items-center gap-1 self-start sm:gap-2">
               {/* Mobile Search */}
               <Button
                 asChild
@@ -189,7 +189,7 @@ export default function Header() {
                 // variant="default"
                 className="hidden border-primary/30 bg-primary text-white sm:inline-flex"
               >
-                <Link href="/pc-builder">
+                <Link href="/flash-deals">
                   <LuGift className="size-4" />
                   Offers
                 </Link>
@@ -208,25 +208,26 @@ export default function Header() {
                 <DropdownMenuContent
                   align="end"
                   sideOffset={8}
-                  className="w-56 rounded-md"
+                  className="w-(--radix-dropdown-menu-trigger-width) min-w-0 rounded-md"
+                  // className="w-(--radix-dropdown-menu-trigger-width) rounded-md"
                 >
                   <DropdownMenuItem
                     asChild
-                    className="cursor-pointer gap-3 px-3 py-2.5"
+                    className="cursor-pointer gap-3 px-2.5 py-1.5"
                   >
                     <Link href="/pc-builder">
                       <FaDesktop className="size-5" />
-                      <span className="font-semibold">PC BUILDER</span>
+                      <span className="text-xs font-semibold">PC BUILDER</span>
                     </Link>
                   </DropdownMenuItem>
 
                   <DropdownMenuItem
                     asChild
-                    className="cursor-pointer gap-3 px-3 py-2.5"
+                    className="cursor-pointer gap-3 px-2.5 py-1.5"
                   >
                     <Link href="/cc-builder">
                       <FaVideo className="size-5" />
-                      <span className="font-semibold">CC BUILDER</span>
+                      <span className="text-xs font-semibold">CC BUILDER</span>
                     </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -284,7 +285,7 @@ export default function Header() {
       </div>
 
       {/* 3. Categories and Navigation */}
-      <div className="relative border-b bg-foreground shadow-xs *:text-background!">
+      <div className="relative border-b border-inverse-surface/80 bg-inverse-surface text-inverse-on-surface shadow-xs">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
           <div className="flex min-w-0 flex-1 items-center">
             {/* Categories Navigation Bar (Desktop & Mobile) */}

@@ -430,9 +430,8 @@ function DesktopCategoryNav() {
         className="flex w-full [scrollbar-width:none] items-center gap-0.5 overflow-x-auto scroll-smooth px-1 py-1 whitespace-nowrap [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {categories.map((category) => {
-          const isOpen =
-            activeCategory?.id === category.id ||
-            hoveredCategoryId === category.id
+          const isHovered = hoveredCategoryId === category.id
+          const isOpen = activeCategory?.id === category.id
 
           return (
             <div
@@ -448,10 +447,13 @@ function DesktopCategoryNav() {
                 href={`/category/${category.slug}`}
                 onClick={handleClose}
                 className={cn(
-                  "relative flex items-center px-3.5 py-2.5 text-xs font-semibold transition-colors select-none xl:text-[13px]",
-                  isOpen
-                    ? "rounded-md bg-primary/8 font-bold text-background"
-                    : "hover:bg-primary/20 hover:text-background"
+                  "relative flex items-center rounded-md px-3.5 py-2.5 text-xs font-semibold text-inverse-on-surface/90",
+                  "transition-colors duration-150 select-none",
+                  "hover:bg-primary/20 hover:text-inverse-on-surface",
+                  "focus-visible:ring-2 focus-visible:ring-inverse-primary focus-visible:ring-offset-2 focus-visible:ring-offset-inverse-surface focus-visible:outline-none",
+                  "xl:text-[13px]",
+                  isHovered && "bg-primary/10",
+                  isOpen && "bg-primary/15 font-bold text-inverse-on-surface"
                 )}
               >
                 {/* অ্যাক্টিভ ইন্ডিকেটর বার (রেফারেন্স ইমেজের মতো নীল টপ বার) */}

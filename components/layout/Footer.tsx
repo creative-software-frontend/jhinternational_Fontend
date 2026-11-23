@@ -23,7 +23,7 @@ const socialIcons = {
 
 export default function Footer() {
   return (
-    <footer className="mt-16 border-t border-border bg-foreground pt-12 pb-8 text-background">
+    <footer className="mt-16 border-t border-inverse-surface/80 bg-inverse-surface pt-12 pb-8 text-inverse-on-surface">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Newsletter & Experience Banner */}
         <div className="mb-12 flex flex-col items-center justify-between gap-6 rounded-2xl border border-border bg-surface-container p-6 sm:p-8 lg:flex-row">
@@ -56,7 +56,7 @@ export default function Footer() {
               <Link href="/" className="flex flex-col">
                 <Image src={LogoImage} alt="Logo" width={200} height={200} />
               </Link>
-              <p className="text-xs leading-relaxed text-background">
+              <p className="text-xs leading-relaxed text-inverse-on-surface/85">
                 Bangladesh&apos;s premier retail destination for high-end gaming
                 Devices and Computer Accessories.
               </p>
@@ -65,7 +65,7 @@ export default function Footer() {
                   <FaPhoneAlt className="shrink-0 text-primary" />
                   <span>
                     Hotline:{" "}
-                    <strong className="text-background">
+                    <strong className="text-inverse-on-surface">
                       {SITE_CONFIG.contact.phones.join(",")}
                     </strong>
                   </span>
@@ -90,7 +90,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     About Us
                   </Link>
@@ -98,7 +98,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/contact"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Contact Us
                   </Link>
@@ -106,7 +106,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/career"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Career Opportunities
                   </Link>
@@ -114,7 +114,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href={SITE_CONFIG.legal.privacy.href}
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Privacy Policy
                   </Link>
@@ -122,7 +122,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href={SITE_CONFIG.legal.terms.href}
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Terms &amp; Conditions
                   </Link>
@@ -130,7 +130,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/blog"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Tech Blog &amp; Reviews
                   </Link>
@@ -147,7 +147,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/category/processors"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Desktop Processors
                   </Link>
@@ -155,7 +155,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/category/graphics-cards"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Graphics Cards (GPU)
                   </Link>
@@ -163,7 +163,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/category/motherboards"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Motherboards
                   </Link>
@@ -171,7 +171,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/category/ram"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     RAM &amp; Memory
                   </Link>
@@ -179,7 +179,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/category/laptops"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Gaming Laptops
                   </Link>
@@ -187,7 +187,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/category/monitors"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     OLED &amp; IPS Monitors
                   </Link>
@@ -204,7 +204,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/track-order"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Track Your Order
                   </Link>
@@ -212,7 +212,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/emi-policy"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     0% EMI Guide
                   </Link>
@@ -220,7 +220,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/warranty"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Warranty Claim Policy
                   </Link>
@@ -228,7 +228,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/returns"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Returns &amp; Refunds
                   </Link>
@@ -236,7 +236,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/stores"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Store Locator
                   </Link>
@@ -244,7 +244,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/faq"
-                    className="transition-colors hover:text-primary"
+                    className="transition-opacity hover:opacity-50"
                   >
                     Frequently Asked Questions
                   </Link>
@@ -265,7 +265,7 @@ export default function Footer() {
                       key={social.key}
                       href={social.href}
                       aria-label={social.label}
-                      className="flex h-9 w-9 items-center justify-center rounded-lg transition-all hover:bg-primary hover:text-primary-foreground"
+                      className="hover:opacity-50-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-all transition-opacity hover:bg-primary"
                     >
                       <Icon className="text-sm" />
                     </a>
@@ -277,7 +277,7 @@ export default function Footer() {
                 Experience {SITE_CONFIG.name} App
               </h4>
               <div className="flex flex-col gap-2">
-                <div className="flex cursor-pointer items-center gap-3 rounded-lg border border-border p-2 transition-colors hover:bg-primary">
+                <div className="flex cursor-pointer items-center gap-3 rounded-lg border border-border p-2 hover:bg-primary">
                   <FaAndroid />
                   <div>
                     <span className="block text-[10px] leading-none uppercase">
@@ -312,7 +312,7 @@ export default function Footer() {
 
         {/* Bottom Bar: Copyright & Payment Partners */}
         <div className="flex flex-col items-center justify-between gap-4 pt-8 text-xs md:flex-row">
-          <p className="text-background">
+          <p className="text-inverse-on-surface/85">
             &copy; {new Date().getFullYear()} {SITE_CONFIG.legalName}. All
             rights reserved.
           </p>

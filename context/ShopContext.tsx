@@ -4,6 +4,7 @@ import useCartState from "@/hooks/useCartState"
 import useCompareState from "@/hooks/useCompareState"
 import useFavoritesState from "@/hooks/useFavoritesState"
 import usePcBuilderState from "@/hooks/usePcBuilderState"
+import useCcBuilderState from "@/hooks/useCcBuilderState"
 import { createContext, useContext } from "react"
 
 interface ShopContextType
@@ -11,7 +12,8 @@ interface ShopContextType
     ReturnType<typeof useCartState>,
     ReturnType<typeof useFavoritesState>,
     ReturnType<typeof useCompareState>,
-    ReturnType<typeof usePcBuilderState> {}
+    ReturnType<typeof usePcBuilderState>,
+    ReturnType<typeof useCcBuilderState> {}
 
 const ShopContext = createContext<ShopContextType | undefined>(undefined)
 
@@ -19,6 +21,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
   const cart = useCartState()
   const favorites = useFavoritesState()
   const pcBuilder = usePcBuilderState()
+  const ccBuilder = useCcBuilderState()
   const compare = useCompareState()
 
   return (
@@ -28,6 +31,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
         ...compare,
         ...favorites,
         ...pcBuilder,
+        ...ccBuilder,
       }}
     >
       {children}

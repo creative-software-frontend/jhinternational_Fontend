@@ -1571,6 +1571,7 @@ export const categories: Category[] = [
 
 interface PcCategory {
   id: string
+  slug: string
   name: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon: any
@@ -1580,15 +1581,106 @@ interface PcCategory {
 export const PC_CATEGORIES: PcCategory[] = [
   {
     id: "processors",
+    slug: "processors",
     name: "Processor (CPU)",
     icon: FaMicrochip,
     required: true,
   },
-  { id: "CPU-Cooler", name: "CPU Cooler", icon: FaBolt, required: false },
-  { id: "motherboard", name: "Motherboard", icon: FaDesktop, required: true },
-  { id: "ram", name: "RAM (Memory)", icon: FaMemory, required: true },
-  { id: "ssd", name: "Storage (SSD/HDD)", icon: FaHdd, required: true },
-  { id: "gpus", name: "Graphics Card (GPU)", icon: FaDesktop, required: false },
-  { id: "psus", name: "Power Supply (PSU)", icon: FaBolt, required: true },
-  { id: "casings", name: "Casing", icon: FaDesktop, required: true },
+  {
+    id: "CPU-Cooler",
+    slug: "cpu-cooler",
+    name: "CPU Cooler",
+    icon: FaBolt,
+    required: false,
+  },
+  {
+    id: "motherboard",
+    slug: "motherboard",
+    name: "Motherboard",
+    icon: FaDesktop,
+    required: true,
+  },
+  { id: "ram", slug: "ram", name: "RAM (Memory)", icon: FaMemory, required: true },
+  {
+    id: "ssd",
+    slug: "ssd",
+    name: "Storage (SSD/HDD)",
+    icon: FaHdd,
+    required: true,
+  },
+  {
+    id: "gpus",
+    slug: "graphics-cards",
+    name: "Graphics Card (GPU)",
+    icon: FaDesktop,
+    required: false,
+  },
+  {
+    id: "psus",
+    slug: "power-supply",
+    name: "Power Supply (PSU)",
+    icon: FaBolt,
+    required: true,
+  },
+  { id: "casings", slug: "pc-case", name: "Casing", icon: FaDesktop, required: true },
+]
+
+interface CcCategory {
+  id: string
+  slug: string
+  name: string
+  icon: IconType
+  required: boolean
+}
+
+export const CC_CATEGORIES: CcCategory[] = [
+  {
+    id: "cc-camera",
+    slug: "cc-camera",
+    name: "CC Camera / IP Camera",
+    icon: FaCamera,
+    required: true,
+  },
+  {
+    id: "dvr-nvr",
+    slug: "dvr-nvr",
+    name: "DVR / NVR (Recorder)",
+    icon: FaHdd,
+    required: true,
+  },
+  {
+    id: "ssd",
+    slug: "ssd",
+    name: "Hard Disk Drive (Storage)",
+    icon: FaHdd,
+    required: true,
+  },
+  {
+    id: "power-supply",
+    slug: "power-supply",
+    name: "Power Supply / Adapter",
+    icon: FaBolt,
+    required: true,
+  },
+  {
+    id: "cables-connectors",
+    slug: "cables-connectors",
+    name: "Cables & Connectors",
+    icon: FaWifi,
+    required: false,
+  },
+  {
+    id: "monitors",
+    slug: "monitors",
+    name: "Monitor",
+    icon: FaTv,
+    required: false,
+  },
+  {
+    id: "ups",
+    slug: "ups",
+    name: "UPS / Power Backup",
+    icon: FaBolt,
+    required: false,
+  },
 ]

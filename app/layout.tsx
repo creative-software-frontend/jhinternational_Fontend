@@ -47,6 +47,9 @@ export const metadata: Metadata = {
     "monitor",
     "peripheral",
   ],
+  icons: {
+    icon: "/images/icon.png",
+  },
   authors: [{ name: SITE_CONFIG.name }],
   creator: SITE_CONFIG.name,
   publisher: SITE_CONFIG.name,
@@ -84,11 +87,6 @@ export const metadata: Metadata = {
     description:
       "Build your dream PC with high-performance components and genuine tech products from Bangladesh's trusted computer store.",
     images: ["/icon.png"],
-  },
-  icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
   },
 }
 

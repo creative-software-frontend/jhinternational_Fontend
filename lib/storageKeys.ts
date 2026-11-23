@@ -4,5 +4,6 @@ export const STORAGE_KEYS = {
   CART: `${SITE_CONFIG.storageKeyPrefix}_cart`,
   FAVORITES: `${SITE_CONFIG.storageKeyPrefix}_favorites`,
   PC_BUILD: `${SITE_CONFIG.storageKeyPrefix}_pc_build`,
+  CC_BUILD: `${SITE_CONFIG.storageKeyPrefix}_cc_build`,
   COMPARE: `${SITE_CONFIG.storageKeyPrefix}_compare`,
 } as const

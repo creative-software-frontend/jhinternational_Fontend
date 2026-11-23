@@ -11,7 +11,7 @@ import type { Metadata } from "next"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "JH International",
   description: `Explore premium tech products, custom computer builds, and exclusive deals from ${SITE_CONFIG.name} in Bangladesh.`,
 }
 
