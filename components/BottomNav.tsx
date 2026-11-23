@@ -34,7 +34,7 @@ export default function BottomNav() {
       solidIcon: HiViewGrid,
     },
     {
-      name: "PC Builder",
+      name: "System Builder",
       href: "/pc-builder",
       outlineIcon: HiOutlineWrench,
       solidIcon: HiWrench,

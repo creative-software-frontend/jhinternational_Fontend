@@ -276,7 +276,7 @@ export default function Footer() {
               <h4 className="mt-2 font-heading text-sm font-bold tracking-wider uppercase">
                 Experience {SITE_CONFIG.name} App
               </h4>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 overscroll-none">
                 <div className="flex cursor-pointer items-center gap-3 rounded-lg border border-border p-2 hover:bg-primary">
                   <FaAndroid />
                   <div>
@@ -290,23 +290,25 @@ export default function Footer() {
             </div>
           </div>
           {/* payment method */}
-          <div className="flex w-fit items-center gap-3 place-self-center text-xs">
+          <div className="mt-4 flex flex-col items-center gap-3 place-self-center text-xs sm:mt-0 sm:flex-row">
             <span className="font-semibold">Accepted Payments:</span>
-            <span className="rounded bg-surface-container px-2.5 py-1 text-xs font-semibold text-foreground">
-              bKash
-            </span>
-            <span className="rounded bg-surface-container px-2.5 py-1 text-xs font-semibold text-foreground">
-              Nagad
-            </span>
-            <span className="rounded bg-surface-container px-2.5 py-1 text-xs font-semibold text-foreground">
-              Visa
-            </span>
-            <span className="rounded bg-surface-container px-2.5 py-1 text-xs font-semibold text-foreground">
-              Mastercard
-            </span>
-            <span className="rounded bg-surface-container px-2.5 py-1 text-xs font-semibold text-foreground">
-              SSLCommerz
-            </span>
+            <div className="flex flex-wrap gap-3">
+              <span className="rounded bg-surface-container px-2.5 py-1 text-xs font-semibold text-foreground">
+                bKash
+              </span>
+              <span className="rounded bg-surface-container px-2.5 py-1 text-xs font-semibold text-foreground">
+                Nagad
+              </span>
+              <span className="rounded bg-surface-container px-2.5 py-1 text-xs font-semibold text-foreground">
+                Visa
+              </span>
+              <span className="rounded bg-surface-container px-2.5 py-1 text-xs font-semibold text-foreground">
+                Mastercard
+              </span>
+              <span className="rounded bg-surface-container px-2.5 py-1 text-xs font-semibold text-foreground">
+                SSLCommerz
+              </span>
+            </div>
           </div>
         </div>
 
